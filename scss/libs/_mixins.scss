@@ -1,0 +1,102 @@
+@mixin Border-radius
+{
+  border-radius: 20px;
+  @media (min-width: 375px) and (max-width:767px)
+  {
+    border-radius: 10px!important;
+  }
+  @media (min-width: 768px) and (max-width:1368px)
+  {
+    border-radius: 20px!important;
+  }
+}
+
+@mixin card($top_bg:red , $url:url(../../images/icon-work.svg))
+{
+  @include Border-radius;
+  border-radius: 20px 20px 50% 50%;
+  background-image: $url ;
+  background-repeat: no-repeat;
+  background-color: $top_bg;
+  background-position: 90% -2%;
+  background-size: 26%;
+  cursor: pointer;
+
+  &:hover
+  {
+    .cardContent
+    {
+      &::before
+      {
+        @include Border-radius;
+        content: "";
+        background: $desaturated_blue;
+        opacity: 0.4;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+
+      }
+    }
+  }
+ 
+  .cardContent
+  {
+    @include Border-radius;
+    padding: 6% 8%;
+    height: 83%;
+    background-color: $dark_blue;
+    border: 1px solid $dark_blue;
+    position: relative;
+    top: 17%;
+    z-index: 2;
+    &__title
+    {
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      line-height: 18px;
+      padding: 5%;
+      color: white;
+
+
+      p
+      {
+        font-weight: 550;
+      }
+
+      img
+      {
+        width: 20px;
+        height: 5px;
+      }
+    }
+
+    &__record
+    {
+      padding: 8% 0 0 5%;
+      
+      &--hours
+      {
+        margin-bottom: 5%;
+        font-size: 3.5rem;
+        font-weight: normal;
+      }
+      &--last
+      {
+        color: $pale_blue;
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+  }
+
+  
+ 
+}
+
+
+
