@@ -50,12 +50,27 @@
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
+  main .container .user .userProfil .userInfo__show {
+    font-size: 0.9rem !important;
+  }
+  main .container .user .userProfil .userInfo__name {
+    font-size: 2rem !important;
+  }
+  main .container .user__period {
+    padding: 10% 12% !important;
+  }
+  main .container .user__period ul li {
+    margin-bottom: 10% !important;
+  }
+  main .container .user__period ul li a {
+    font-size: 0.9rem !important;
+  }
   main .container div[class*="card-"] .cardContent {
     top: 18% !important;
   }
   main .container div[class*="card-"] .cardContent__title {
     padding: 10% 5% !important;
-    margin-bottom: 15% !important;
+    margin-bottom: 5% !important;
   }
   main .container div[class*="card-"] .cardContent__title p {
     font-size: 0.8rem !important;
@@ -63,10 +78,10 @@
   }
   main .container div[class*="card-"] .cardContent__record--hours {
     margin-bottom: 5% !important;
-    font-size: 2.5rem !important;
+    font-size: 2.3rem !important;
   }
   main .container div[class*="card-"] .cardContent__record--last {
-    font-size: 0.9rem !important;
+    font-size: 0.8rem !important;
   }
 }
 
