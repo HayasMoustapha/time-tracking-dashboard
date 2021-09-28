@@ -89,6 +89,38 @@
   {
     .container
     {
+      .user
+      {
+        .userProfil
+        {
+          .userInfo
+          {
+            &__show
+            {
+              font-size:0.9rem!important;
+            }
+            &__name
+            {
+              font-size: 2rem!important;
+            }
+          }
+        }
+        &__period 
+        {
+          padding: 10% 12%!important;
+          ul
+          {
+            li
+            {
+              margin-bottom:10%!important;
+              a
+              {
+                font-size:0.9rem !important;
+              }
+            }
+          }
+        }
+      }
       div[class*="card-"]
       {
         .cardContent
@@ -97,7 +129,7 @@
           &__title
           {
             padding: 10% 5%!important;
-            margin-bottom: 15%!important;
+            margin-bottom: 5%!important;
 
             p
             {
@@ -110,11 +142,11 @@
             &--hours
             {
               margin-bottom: 5%!important;
-              font-size: 2.5rem!important;
+              font-size: 2.3rem!important;
             }
             &--last
             {
-              font-size:0.9rem!important;
+              font-size:0.8rem!important;
             }
           }
         }
@@ -170,7 +202,7 @@
             }
           }
         }
-
+     
         &__period
         {
           padding: 0% 8%!important;
