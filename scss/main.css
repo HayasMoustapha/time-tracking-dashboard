@@ -1,107 +1,82 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
-@media (min-width: 1024px) and (max-width: 1368px) {
+@media (min-width: 768px) and (max-width: 1360px) {
   main .container {
-    -ms-grid-rows: (30%)[2] !important;
-        grid-template-rows: repeat(2, 30%) !important;
-    -ms-grid-columns: (25%)[4] !important;
-        grid-template-columns: repeat(4, 25%) !important;
+    padding: 0 20px !important;
   }
-  main .container .user .userProfil {
-    padding: 0% 0% !important;
-  }
-  main .container .user .userProfil img {
-    width: 35% !important;
-  }
-  main .container .user__period {
-    padding: 20% 12% 7% 12% !important;
-  }
-  main .container .user__period ul li {
-    margin-bottom: 15% !important;
-  }
-  main .container div[class*="card-"] {
-    background-position: 80% -2% !important;
-    background-size: 39% !important;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  main .container {
-    -ms-grid-columns: (26%)[4] !important;
-        grid-template-columns: repeat(4, 26%) !important;
+  main .container .content {
+    -ms-grid-columns: (1fr)[4] !important;
+        grid-template-columns: repeat(4, 1fr) !important;
     -ms-grid-rows: (25%)[2] !important;
         grid-template-rows: repeat(2, 25%) !important;
+    grid-column-gap: 3% !important;
+    grid-row-gap: 3% !important;
   }
-  main .container .user .userProfil img {
+  main .container .content .user .userProfil img {
     width: 40% !important;
   }
-  main .container .user .userProfil .userInfo {
-    margin-right: 40% !important;
+  main .container .content .user .userProfil .userInfo__show {
+    font-size: 0.8rem !important;
   }
-  main .container .user .userProfil .userInfo__name {
-    font-size: 1.8em !important;
+  main .container .content .user .userProfil .userInfo__name {
+    font-size: 1.8rem !important;
   }
-  main .container .user__period {
-    padding: 20% 12% 7% 12% !important;
+  main .container .content .user__period {
+    padding: 8% 12% !important;
   }
-  main .container div[class*="card-"] {
+  main .container .content .user__period ul li {
+    margin-bottom: 10% !important;
+  }
+  main .container .content .user__period ul li a {
+    font-size: 0.8rem !important;
+  }
+  main .container .content div[class*="card-"] {
     background-position: 80% -1% !important;
     background-size: 40% !important;
   }
-}
-
-@media (min-width: 768px) and (max-width: 1368px) {
-  main .container .user .userProfil .userInfo__show {
-    font-size: 0.9rem !important;
-  }
-  main .container .user .userProfil .userInfo__name {
-    font-size: 2rem !important;
-  }
-  main .container .user__period {
-    padding: 10% 12% !important;
-  }
-  main .container .user__period ul li {
-    margin-bottom: 10% !important;
-  }
-  main .container .user__period ul li a {
-    font-size: 0.9rem !important;
-  }
-  main .container div[class*="card-"] .cardContent {
+  main .container .content div[class*="card-"] .cardContent {
     top: 18% !important;
   }
-  main .container div[class*="card-"] .cardContent__title {
+  main .container .content div[class*="card-"] .cardContent__title {
     padding: 10% 5% !important;
     margin-bottom: 5% !important;
   }
-  main .container div[class*="card-"] .cardContent__title p {
+  main .container .content div[class*="card-"] .cardContent__title p {
     font-size: 0.8rem !important;
     line-height: 0.6rem !important;
   }
-  main .container div[class*="card-"] .cardContent__record--hours {
+  main .container .content div[class*="card-"] .cardContent__record {
+    padding: 2% 0 0 5% !important;
+  }
+  main .container .content div[class*="card-"] .cardContent__record--hours {
     margin-bottom: 5% !important;
     font-size: 2.3rem !important;
   }
-  main .container div[class*="card-"] .cardContent__record--last {
+  main .container .content div[class*="card-"] .cardContent__record--last {
     font-size: 0.8rem !important;
   }
 }
 
 @media only screen and (max-width: 750px) {
-  main .container {
-    height: 100% !important;
-    padding: 6% !important;
-    -ms-grid-columns: (80%)[1] !important;
-        grid-template-columns: repeat(1, 80%) !important;
-    -ms-grid-rows: (12.2%)[7] !important;
-        grid-template-rows: repeat(7, 12.2%) !important;
-    grid-gap: 2.5% !important;
-    justify-items: stretch !important;
+  main {
+    height: 150vh !important;
   }
-  main .container .user {
+  main .container {
+    padding: 20px !important;
+  }
+  main .container .content {
+    height: 100% !important;
+    -ms-grid-columns: (1fr)[1] !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+    -ms-grid-rows: (1fr)[7] !important;
+        grid-template-rows: repeat(7, 1fr) !important;
+    grid-gap: 2% !important;
+  }
+  main .container .content .user {
     grid-column: auto !important;
     grid-row: auto !important;
     border-radius: 10px !important;
   }
-  main .container .user .userProfil {
+  main .container .content .user .userProfil {
     border-radius: 10px !important;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -110,65 +85,71 @@
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
             flex-direction: row !important;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+    padding: 0 5% !important;
   }
-  main .container .user .userProfil img {
+  main .container .content .user .userProfil img {
     right: 0% !important;
     bottom: 2% !important;
     width: 15% !important;
   }
-  main .container .user .userProfil .userInfo {
+  main .container .content .user .userProfil .userInfo {
     margin-right: 25% !important;
     position: relative;
     left: 5%;
   }
-  main .container .user .userProfil .userInfo__show {
+  main .container .content .user .userProfil .userInfo__show {
     font-size: 10px !important;
   }
-  main .container .user .userProfil .userInfo__name {
+  main .container .content .user .userProfil .userInfo__name {
     font-size: 0.8em !important;
-    width: 100% !important;
   }
-  main .container .user__period {
+  main .container .content .user__period {
     padding: 0% 8% !important;
   }
-  main .container .user__period ul {
+  main .container .content .user__period ul {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
     -ms-flex-pack: distribute !important;
         justify-content: space-around !important;
+    position: relative !important;
+    top: 5px !important;
   }
-  main .container .user__period ul li {
+  main .container .content .user__period ul li {
     margin-bottom: 0 !important;
   }
-  main .container .user__period ul li a {
+  main .container .content .user__period ul li a {
     font-size: 0.5rem !important;
     line-height: 1.3rem !important;
     font-weight: 500;
   }
-  main .container div[class*="card-"] {
+  main .container .content div[class*="card-"] {
     background-position: 90% -5% !important;
     background-size: 15% !important;
     border-radius: 10px 10px 50% 50% !important;
+    margin-bottom: 10px;
   }
-  main .container div[class*="card-"] .cardContent {
-    height: 86% !important;
+  main .container .content div[class*="card-"] .cardContent {
+    height: 80% !important;
     top: 25% !important;
     padding: 0px 5% !important;
     border-radius: 10px !important;
   }
-  main .container div[class*="card-"] .cardContent__title {
+  main .container .content div[class*="card-"] .cardContent__title {
     padding: 0 !important;
     margin: 6% auto !important;
   }
-  main .container div[class*="card-"] .cardContent__title p {
+  main .container .content div[class*="card-"] .cardContent__title p {
     font-size: 10px !important;
     line-height: 10px !important;
   }
-  main .container div[class*="card-"] .cardContent__title img {
+  main .container .content div[class*="card-"] .cardContent__title img {
     width: 15px !important;
   }
-  main .container div[class*="card-"] .cardContent__record {
+  main .container .content div[class*="card-"] .cardContent__record {
     padding: 0 !important;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -177,12 +158,12 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  main .container div[class*="card-"] .cardContent__record--hours {
+  main .container .content div[class*="card-"] .cardContent__record--hours {
     margin-bottom: 0 !important;
     font-size: 1.2rem !important;
     line-height: 1.5rem !important;
   }
-  main .container div[class*="card-"] .cardContent__record--last {
+  main .container .content div[class*="card-"] .cardContent__record--last {
     font-size: 0.6rem !important;
     line-height: 1.5rem !important;
     padding-top: 1%;
@@ -204,10 +185,13 @@ main {
 }
 
 main .container {
-  width: 80%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
+  padding: 0 50px;
+}
+
+main .container .content {
+  width: 100%;
+  height: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (20%)[4];
@@ -219,14 +203,11 @@ main .container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
-main .container .user {
+main .container .content .user {
   border-radius: 20px;
   -ms-grid-column: 1;
   grid-column: 1;
@@ -237,18 +218,18 @@ main .container .user {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .user {
+  main .container .content .user {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .user {
+  main .container .content .user {
     border-radius: 20px !important;
   }
 }
 
-main .container .user .userProfil {
+main .container .content .user .userProfil {
   border-radius: 20px;
   height: 70%;
   display: -webkit-box;
@@ -270,18 +251,18 @@ main .container .user .userProfil {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .user .userProfil {
+  main .container .content .user .userProfil {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .user .userProfil {
+  main .container .content .user .userProfil {
     border-radius: 20px !important;
   }
 }
 
-main .container .user .userProfil img {
+main .container .content .user .userProfil img {
   width: 30%;
   border: 3px solid white;
   border-radius: 50%;
@@ -290,50 +271,50 @@ main .container .user .userProfil img {
   bottom: 10%;
 }
 
-main .container .user .userProfil .userInfo {
+main .container .content .user .userProfil .userInfo {
   margin-right: 50%;
 }
 
-main .container .user .userProfil .userInfo__show {
+main .container .content .user .userProfil .userInfo__show {
   color: rgba(189, 193, 255, 0.904);
   font-weight: 500;
 }
 
-main .container .user .userProfil .userInfo__name {
+main .container .content .user .userProfil .userInfo__name {
   width: 2rem;
   font-size: 2.5rem;
 }
 
-main .container .user__period {
+main .container .content .user__period {
   padding: 10% 12% 7% 12%;
   height: 30%;
 }
 
-main .container .user__period ul {
+main .container .content .user__period ul {
   list-style-type: none;
 }
 
-main .container .user__period ul li {
+main .container .content .user__period ul li {
   margin-bottom: 8%;
 }
 
-main .container .user__period ul li a {
+main .container .content .user__period ul li a {
   cursor: pointer;
   text-decoration: none;
   color: rgba(189, 193, 255, 0.904);
 }
 
-main .container .user__period ul li a:hover {
+main .container .content .user__period ul li a:hover {
   color: white;
   font-weight: 700;
 }
 
-main .container .user__period ul li .active {
+main .container .content .user__period ul li .active {
   color: white;
-  font-weight: 500;
+  font-weight: 700;
 }
 
-main .container .card-1 {
+main .container .content .card-1 {
   border-radius: 20px;
   border-radius: 20px 20px 50% 50%;
   background-image: url(../../images/icon-work.svg);
@@ -345,18 +326,18 @@ main .container .card-1 {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-1 {
+  main .container .content .card-1 {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-1 {
+  main .container .content .card-1 {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-1:hover .cardContent::before {
+main .container .content .card-1:hover .cardContent::before {
   border-radius: 20px;
   content: "";
   background: #636cd4;
@@ -370,18 +351,18 @@ main .container .card-1:hover .cardContent::before {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-1:hover .cardContent::before {
+  main .container .content .card-1:hover .cardContent::before {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-1:hover .cardContent::before {
+  main .container .content .card-1:hover .cardContent::before {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-1 .cardContent {
+main .container .content .card-1 .cardContent {
   border-radius: 20px;
   padding: 6% 8%;
   height: 83%;
@@ -393,18 +374,18 @@ main .container .card-1 .cardContent {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-1 .cardContent {
+  main .container .content .card-1 .cardContent {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-1 .cardContent {
+  main .container .content .card-1 .cardContent {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-1 .cardContent__title {
+main .container .content .card-1 .cardContent__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -417,32 +398,32 @@ main .container .card-1 .cardContent__title {
   color: white;
 }
 
-main .container .card-1 .cardContent__title p {
+main .container .content .card-1 .cardContent__title p {
   font-weight: 600;
 }
 
-main .container .card-1 .cardContent__title img {
+main .container .content .card-1 .cardContent__title img {
   width: 20px;
   height: 5px;
 }
 
-main .container .card-1 .cardContent__record {
+main .container .content .card-1 .cardContent__record {
   padding: 8% 0 0 5%;
 }
 
-main .container .card-1 .cardContent__record--hours {
+main .container .content .card-1 .cardContent__record--hours {
   margin-bottom: 5%;
   font-size: 3.5rem;
   font-weight: normal;
 }
 
-main .container .card-1 .cardContent__record--last {
+main .container .content .card-1 .cardContent__record--last {
   color: rgba(189, 193, 255, 0.904);
   font-weight: 500;
   font-size: 16px;
 }
 
-main .container .card-2 {
+main .container .content .card-2 {
   border-radius: 20px;
   border-radius: 20px 20px 50% 50%;
   background-image: url(/images/icon-play.svg);
@@ -454,18 +435,18 @@ main .container .card-2 {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-2 {
+  main .container .content .card-2 {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-2 {
+  main .container .content .card-2 {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-2:hover .cardContent::before {
+main .container .content .card-2:hover .cardContent::before {
   border-radius: 20px;
   content: "";
   background: #636cd4;
@@ -479,18 +460,18 @@ main .container .card-2:hover .cardContent::before {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-2:hover .cardContent::before {
+  main .container .content .card-2:hover .cardContent::before {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-2:hover .cardContent::before {
+  main .container .content .card-2:hover .cardContent::before {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-2 .cardContent {
+main .container .content .card-2 .cardContent {
   border-radius: 20px;
   padding: 6% 8%;
   height: 83%;
@@ -502,18 +483,18 @@ main .container .card-2 .cardContent {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-2 .cardContent {
+  main .container .content .card-2 .cardContent {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-2 .cardContent {
+  main .container .content .card-2 .cardContent {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-2 .cardContent__title {
+main .container .content .card-2 .cardContent__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -526,32 +507,32 @@ main .container .card-2 .cardContent__title {
   color: white;
 }
 
-main .container .card-2 .cardContent__title p {
+main .container .content .card-2 .cardContent__title p {
   font-weight: 600;
 }
 
-main .container .card-2 .cardContent__title img {
+main .container .content .card-2 .cardContent__title img {
   width: 20px;
   height: 5px;
 }
 
-main .container .card-2 .cardContent__record {
+main .container .content .card-2 .cardContent__record {
   padding: 8% 0 0 5%;
 }
 
-main .container .card-2 .cardContent__record--hours {
+main .container .content .card-2 .cardContent__record--hours {
   margin-bottom: 5%;
   font-size: 3.5rem;
   font-weight: normal;
 }
 
-main .container .card-2 .cardContent__record--last {
+main .container .content .card-2 .cardContent__record--last {
   color: rgba(189, 193, 255, 0.904);
   font-weight: 500;
   font-size: 16px;
 }
 
-main .container .card-3 {
+main .container .content .card-3 {
   border-radius: 20px;
   border-radius: 20px 20px 50% 50%;
   background-image: url(/images/icon-study.svg);
@@ -563,18 +544,18 @@ main .container .card-3 {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-3 {
+  main .container .content .card-3 {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-3 {
+  main .container .content .card-3 {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-3:hover .cardContent::before {
+main .container .content .card-3:hover .cardContent::before {
   border-radius: 20px;
   content: "";
   background: #636cd4;
@@ -588,18 +569,18 @@ main .container .card-3:hover .cardContent::before {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-3:hover .cardContent::before {
+  main .container .content .card-3:hover .cardContent::before {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-3:hover .cardContent::before {
+  main .container .content .card-3:hover .cardContent::before {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-3 .cardContent {
+main .container .content .card-3 .cardContent {
   border-radius: 20px;
   padding: 6% 8%;
   height: 83%;
@@ -611,18 +592,18 @@ main .container .card-3 .cardContent {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-3 .cardContent {
+  main .container .content .card-3 .cardContent {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-3 .cardContent {
+  main .container .content .card-3 .cardContent {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-3 .cardContent__title {
+main .container .content .card-3 .cardContent__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -635,32 +616,32 @@ main .container .card-3 .cardContent__title {
   color: white;
 }
 
-main .container .card-3 .cardContent__title p {
+main .container .content .card-3 .cardContent__title p {
   font-weight: 600;
 }
 
-main .container .card-3 .cardContent__title img {
+main .container .content .card-3 .cardContent__title img {
   width: 20px;
   height: 5px;
 }
 
-main .container .card-3 .cardContent__record {
+main .container .content .card-3 .cardContent__record {
   padding: 8% 0 0 5%;
 }
 
-main .container .card-3 .cardContent__record--hours {
+main .container .content .card-3 .cardContent__record--hours {
   margin-bottom: 5%;
   font-size: 3.5rem;
   font-weight: normal;
 }
 
-main .container .card-3 .cardContent__record--last {
+main .container .content .card-3 .cardContent__record--last {
   color: rgba(189, 193, 255, 0.904);
   font-weight: 500;
   font-size: 16px;
 }
 
-main .container .card-4 {
+main .container .content .card-4 {
   border-radius: 20px;
   border-radius: 20px 20px 50% 50%;
   background-image: url(/images/icon-exercise.svg);
@@ -672,18 +653,18 @@ main .container .card-4 {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-4 {
+  main .container .content .card-4 {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-4 {
+  main .container .content .card-4 {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-4:hover .cardContent::before {
+main .container .content .card-4:hover .cardContent::before {
   border-radius: 20px;
   content: "";
   background: #636cd4;
@@ -697,18 +678,18 @@ main .container .card-4:hover .cardContent::before {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-4:hover .cardContent::before {
+  main .container .content .card-4:hover .cardContent::before {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-4:hover .cardContent::before {
+  main .container .content .card-4:hover .cardContent::before {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-4 .cardContent {
+main .container .content .card-4 .cardContent {
   border-radius: 20px;
   padding: 6% 8%;
   height: 83%;
@@ -720,18 +701,18 @@ main .container .card-4 .cardContent {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-4 .cardContent {
+  main .container .content .card-4 .cardContent {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-4 .cardContent {
+  main .container .content .card-4 .cardContent {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-4 .cardContent__title {
+main .container .content .card-4 .cardContent__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -744,32 +725,32 @@ main .container .card-4 .cardContent__title {
   color: white;
 }
 
-main .container .card-4 .cardContent__title p {
+main .container .content .card-4 .cardContent__title p {
   font-weight: 600;
 }
 
-main .container .card-4 .cardContent__title img {
+main .container .content .card-4 .cardContent__title img {
   width: 20px;
   height: 5px;
 }
 
-main .container .card-4 .cardContent__record {
+main .container .content .card-4 .cardContent__record {
   padding: 8% 0 0 5%;
 }
 
-main .container .card-4 .cardContent__record--hours {
+main .container .content .card-4 .cardContent__record--hours {
   margin-bottom: 5%;
   font-size: 3.5rem;
   font-weight: normal;
 }
 
-main .container .card-4 .cardContent__record--last {
+main .container .content .card-4 .cardContent__record--last {
   color: rgba(189, 193, 255, 0.904);
   font-weight: 500;
   font-size: 16px;
 }
 
-main .container .card-5 {
+main .container .content .card-5 {
   border-radius: 20px;
   border-radius: 20px 20px 50% 50%;
   background-image: url(/images/icon-social.svg);
@@ -781,18 +762,18 @@ main .container .card-5 {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-5 {
+  main .container .content .card-5 {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-5 {
+  main .container .content .card-5 {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-5:hover .cardContent::before {
+main .container .content .card-5:hover .cardContent::before {
   border-radius: 20px;
   content: "";
   background: #636cd4;
@@ -806,18 +787,18 @@ main .container .card-5:hover .cardContent::before {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-5:hover .cardContent::before {
+  main .container .content .card-5:hover .cardContent::before {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-5:hover .cardContent::before {
+  main .container .content .card-5:hover .cardContent::before {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-5 .cardContent {
+main .container .content .card-5 .cardContent {
   border-radius: 20px;
   padding: 6% 8%;
   height: 83%;
@@ -829,18 +810,18 @@ main .container .card-5 .cardContent {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-5 .cardContent {
+  main .container .content .card-5 .cardContent {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-5 .cardContent {
+  main .container .content .card-5 .cardContent {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-5 .cardContent__title {
+main .container .content .card-5 .cardContent__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -853,32 +834,32 @@ main .container .card-5 .cardContent__title {
   color: white;
 }
 
-main .container .card-5 .cardContent__title p {
+main .container .content .card-5 .cardContent__title p {
   font-weight: 600;
 }
 
-main .container .card-5 .cardContent__title img {
+main .container .content .card-5 .cardContent__title img {
   width: 20px;
   height: 5px;
 }
 
-main .container .card-5 .cardContent__record {
+main .container .content .card-5 .cardContent__record {
   padding: 8% 0 0 5%;
 }
 
-main .container .card-5 .cardContent__record--hours {
+main .container .content .card-5 .cardContent__record--hours {
   margin-bottom: 5%;
   font-size: 3.5rem;
   font-weight: normal;
 }
 
-main .container .card-5 .cardContent__record--last {
+main .container .content .card-5 .cardContent__record--last {
   color: rgba(189, 193, 255, 0.904);
   font-weight: 500;
   font-size: 16px;
 }
 
-main .container .card-6 {
+main .container .content .card-6 {
   border-radius: 20px;
   border-radius: 20px 20px 50% 50%;
   background-image: url(/images/icon-self-care.svg);
@@ -890,18 +871,18 @@ main .container .card-6 {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-6 {
+  main .container .content .card-6 {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-6 {
+  main .container .content .card-6 {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-6:hover .cardContent::before {
+main .container .content .card-6:hover .cardContent::before {
   border-radius: 20px;
   content: "";
   background: #636cd4;
@@ -915,18 +896,18 @@ main .container .card-6:hover .cardContent::before {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-6:hover .cardContent::before {
+  main .container .content .card-6:hover .cardContent::before {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-6:hover .cardContent::before {
+  main .container .content .card-6:hover .cardContent::before {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-6 .cardContent {
+main .container .content .card-6 .cardContent {
   border-radius: 20px;
   padding: 6% 8%;
   height: 83%;
@@ -938,18 +919,18 @@ main .container .card-6 .cardContent {
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
-  main .container .card-6 .cardContent {
+  main .container .content .card-6 .cardContent {
     border-radius: 10px !important;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1368px) {
-  main .container .card-6 .cardContent {
+  main .container .content .card-6 .cardContent {
     border-radius: 20px !important;
   }
 }
 
-main .container .card-6 .cardContent__title {
+main .container .content .card-6 .cardContent__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -962,26 +943,26 @@ main .container .card-6 .cardContent__title {
   color: white;
 }
 
-main .container .card-6 .cardContent__title p {
+main .container .content .card-6 .cardContent__title p {
   font-weight: 600;
 }
 
-main .container .card-6 .cardContent__title img {
+main .container .content .card-6 .cardContent__title img {
   width: 20px;
   height: 5px;
 }
 
-main .container .card-6 .cardContent__record {
+main .container .content .card-6 .cardContent__record {
   padding: 8% 0 0 5%;
 }
 
-main .container .card-6 .cardContent__record--hours {
+main .container .content .card-6 .cardContent__record--hours {
   margin-bottom: 5%;
   font-size: 3.5rem;
   font-weight: normal;
 }
 
-main .container .card-6 .cardContent__record--last {
+main .container .content .card-6 .cardContent__record--last {
   color: rgba(189, 193, 255, 0.904);
   font-weight: 500;
   font-size: 16px;
