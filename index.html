@@ -6,9 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="scss/main.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="./script/data.json"></script>
-  <script src="script/script.js"></script>
+  
   <title>Frontend Mentor | card tracking dashboard</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -35,14 +34,14 @@
             </div>
             <div class="user__period">
               <ul>
-                <li><a id="daily">Daily</a></li>
-                <li><a  id="weekly">Weekly</a></li>
-                <li><a id="monthly">Monthly</a></li>
+                <li><a id="daily" class="">Daily</a></li>
+                <li><a  id="weekly" class="active">Weekly</a></li>
+                <li><a id="monthly" class="">Monthly</a></li>
               </ul>
             </div>
           </div>
 
-          <div class="card-1" id="work">
+          <div class="card-1" data-page="0" id="work">
             <div class="cardContent">
               <div class="cardContent__title">
                 <p class="title"></p>
@@ -55,70 +54,70 @@
             </div>
           </div>
 
-          <div class="card-2" id="play">
+          <div class="card-2" data-page="1" id="play">
             <div class="cardContent">
               <div class="cardContent__title">
-                <p class="title">Play</p>
+                <p class="title"></p>
                 <img src="./images/icon-ellipsis.svg" alt="">
               </div>
               <div class="cardContent__record">
-                <p class="cardContent__record--hours current">32hrs</p>
-                <p class="cardContent__record--last previous"><span class="last-time">Last week</span> - <span class="time">36hrs</span></p>
+                <p class="cardContent__record--hours current"></p>
+                <p class="cardContent__record--last previous"><span class="last-time"></span> - <span class="time"></span></p>
               </div>
             </div>
           </div>
 
-          <div class="card-3" id="study">
+          <div class="card-3" data-page="2" id="study">
             <div class="cardContent">
               <div class="cardContent__title">
-                <p class="title">Study</p>
+                <p class="title"></p>
                 <img src="./images/icon-ellipsis.svg" alt="">
               </div>
               <div class="cardContent__record">
-                <p class="cardContent__record--hours current">32hrs</p>
-                <p class="cardContent__record--last previous"><span class="last-time">Last week</span> - <span class="time">36hrs</span></p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="card-4" id="exercise">
-            <div class="cardContent">
-              <div class="cardContent__title">
-                <p class="title">Exercise</p>
-                <img src="./images/icon-ellipsis.svg" alt="">
-              </div>
-              <div class="cardContent__record">
-                <p class="cardContent__record--hours current">32hrs</p>
-                <p class="cardContent__record--last previous"><span class="last-time">Last week</span> - <span class="time">36hrs</span></p>
+                <p class="cardContent__record--hours current"></p>
+                <p class="cardContent__record--last previous"><span class="last-time"></span> - <span class="time"></span></p>
               </div>
             </div>
           </div>
 
 
-          <div class="card-5" id="social">
+          <div class="card-4" data-page="3" id="exercise">
             <div class="cardContent">
               <div class="cardContent__title">
-                <p class="title">Social</p>
+                <p class="title"></p>
                 <img src="./images/icon-ellipsis.svg" alt="">
               </div>
               <div class="cardContent__record">
-                <p class="cardContent__record--hours current">32hrs</p>
-                <p class="cardContent__record--last previous"><span class="last-time">Last week</span> - <span class="time">36hrs</span></p>
+                <p class="cardContent__record--hours current"></p>
+                <p class="cardContent__record--last previous"><span class="last-time"></span> - <span class="time"></span></p>
               </div>
             </div>
           </div>
 
 
-          <div class="card-6" id="self_care">
+          <div class="card-5" data-page="4" id="social">
             <div class="cardContent">
               <div class="cardContent__title">
-                <p class="title">Self Care</p>
+                <p class="title"></p>
                 <img src="./images/icon-ellipsis.svg" alt="">
               </div>
               <div class="cardContent__record">
-                <p class="cardContent__record--hours current">32hrs</p>
-                <p class="cardContent__record--last previous"><span class="last-time">Last week</span> - <span class="time">36hrs</span></p>
+                <p class="cardContent__record--hours current"></p>
+                <p class="cardContent__record--last previous"><span class="last-time"></span> - <span class="time"></span></p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card-6" data-page="5" id="self_care">
+            <div class="cardContent">
+              <div class="cardContent__title">
+                <p class="title"></p>
+                <img src="./images/icon-ellipsis.svg" alt="">
+              </div>
+              <div class="cardContent__record">
+                <p class="cardContent__record--hours current"></p>
+                <p class="cardContent__record--last previous"><span class="last-time"></span> - <span class="time"></span></p>
               </div>
             </div>
           </div>
@@ -134,7 +133,7 @@
     </footer>
 
 
-  
+    <script src="script/script.js"></script>
    
     
 </body>
