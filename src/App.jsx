@@ -22,7 +22,7 @@ export default function App() {
         {/* Profile + period switch */}
         <div className="flex flex-col overflow-hidden rounded-3xl bg-card">
           <div className="flex flex-1 flex-col gap-8 rounded-3xl bg-accent p-6 sm:gap-12 sm:p-7">
-            <img src="/images/image-jeremy.png" alt="" className="h-16 w-16 rounded-full border-[3px] border-white" />
+            <img src={import.meta.env.BASE_URL + "images/image-jeremy.png"} alt="" className="h-16 w-16 rounded-full border-[3px] border-white" />
             <div>
               <p className="text-sm text-soft">Tableau de bord</p>
               <h1 className="mt-1 text-3xl font-light leading-tight sm:text-4xl">Jérémy Robson</h1>
@@ -60,7 +60,7 @@ export default function App() {
               <button className="group relative w-full rounded-3xl bg-card p-6 text-left transition-colors hover:bg-card-hover">
                 <div className="flex items-center justify-between">
                   <h2 className="text-base font-medium">{a.title}</h2>
-                  <img src="/images/icon-ellipsis.svg" alt="" className="opacity-70" />
+                  <img src={import.meta.env.BASE_URL + "images/icon-ellipsis.svg"} alt="" className="opacity-70" />
                 </div>
                 <p className="mt-4 text-4xl font-light sm:text-5xl">
                   <AnimatedHours value={tf.current} />
