@@ -1,140 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="scss/main.css">
-  <script src="./script/data.json"></script>
-  
-  <title>Frontend Mentor | card tracking dashboard</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-
-</head>
-<body>
-
-    <main>
-      <div class="container">
-
-        <div class="content">
-
-          <div class="user">
-            <div class="userProfil">
-              <img src="./images/image-jeremy.png" alt="" srcset="">
-              <div class="userInfo">
-                <p class="userInfo__show">Report for</p>
-                <p class="userInfo__name">Jeremy Robson</p>
-              </div>
-            </div>
-            <div class="user__period">
-              <ul>
-                <li><a id="daily" class="">Daily</a></li>
-                <li><a  id="weekly" class="active">Weekly</a></li>
-                <li><a id="monthly" class="">Monthly</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="card-1" data-page="0" id="work">
-            <div class="cardContent">
-              <div class="cardContent__title">
-                <p class="title"></p>
-                <img src="./images/icon-ellipsis.svg" alt="">
-              </div>
-              <div class="cardContent__record">
-                <p class="cardContent__record--hours current"></p>
-                <p class="cardContent__record--last previous"><span class="last-time"></span> - <span class="time"></span></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-2" data-page="1" id="play">
-            <div class="cardContent">
-              <div class="cardContent__title">
-                <p class="title"></p>
-                <img src="./images/icon-ellipsis.svg" alt="">
-              </div>
-              <div class="cardContent__record">
-                <p class="cardContent__record--hours current"></p>
-                <p class="cardContent__record--last previous"><span class="last-time"></span> - <span class="time"></span></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-3" data-page="2" id="study">
-            <div class="cardContent">
-              <div class="cardContent__title">
-                <p class="title"></p>
-                <img src="./images/icon-ellipsis.svg" alt="">
-              </div>
-              <div class="cardContent__record">
-                <p class="cardContent__record--hours current"></p>
-                <p class="cardContent__record--last previous"><span class="last-time"></span> - <span class="time"></span></p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="card-4" data-page="3" id="exercise">
-            <div class="cardContent">
-              <div class="cardContent__title">
-                <p class="title"></p>
-                <img src="./images/icon-ellipsis.svg" alt="">
-              </div>
-              <div class="cardContent__record">
-                <p class="cardContent__record--hours current"></p>
-                <p class="cardContent__record--last previous"><span class="last-time"></span> - <span class="time"></span></p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="card-5" data-page="4" id="social">
-            <div class="cardContent">
-              <div class="cardContent__title">
-                <p class="title"></p>
-                <img src="./images/icon-ellipsis.svg" alt="">
-              </div>
-              <div class="cardContent__record">
-                <p class="cardContent__record--hours current"></p>
-                <p class="cardContent__record--last previous"><span class="last-time"></span> - <span class="time"></span></p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="card-6" data-page="5" id="self_care">
-            <div class="cardContent">
-              <div class="cardContent__title">
-                <p class="title"></p>
-                <img src="./images/icon-ellipsis.svg" alt="">
-              </div>
-              <div class="cardContent__record">
-                <p class="cardContent__record--hours current"></p>
-                <p class="cardContent__record--last previous"><span class="last-time"></span> - <span class="time"></span></p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </main>
-
-  
-    <footer class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </footer>
-
-
-    <script src="script/script.js"></script>
-   
-    
-</body>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Tracking — tableau de bord</title>
+    <meta name="description" content="Tableau de bord de suivi du temps : visualisez vos heures par activité, en vue quotidienne, hebdomadaire ou mensuelle." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
